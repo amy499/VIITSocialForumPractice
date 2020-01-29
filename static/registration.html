@@ -1,0 +1,166 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <title>Student Registration</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="jumbotron">
+        <h1 class="text-center">New Registration</h1>
+        <form
+          name="registrationForm"
+          id="registrationForm"
+          class="was-validated"
+          action="/signup"
+          method="POST"
+        >
+          <div class="form-group">
+            <label for="email_address">Email Address</label>
+            <input
+              maxlength="100"
+              type="email"
+              class="form-control"
+              name="email_address"
+              id="email_address"
+              placeholder="name.grnum@viit.ac.in"
+              required
+            />
+            <div class="valid-feedback">Valid</div>
+            <div class="invalid-feedback">Enter Email Address</div>
+          </div>
+          <div class="form-group">
+            <label for="gr_number">GR Number</label>
+            <input
+              type="text"
+              class="form-control"
+              style="text-transform:uppercase"
+              name="gr_number"
+              id="gr_number"
+              required
+            />
+            <div class="valid-feedback">Valid</div>
+            <div class="invalid-feedback">Enter GR Number</div>
+          </div>
+          <div class="form-group">
+            <label for="first_name">First Name:</label>
+            <input
+              maxlength="30"
+              type="text"
+              class="form-control"
+              style="text-transform: uppercase"
+              name="first_name"
+              id="first_name"
+              placeholder="First Name"
+              required
+            />
+            <div class="valid-feedback">Valid</div>
+            <div class="invalid-feedback">Enter First Name</div>
+          </div>
+          <div class="form-group">
+            <label for="last_name">Last Name:</label>
+            <input
+              maxlength="30"
+              type="text"
+              class="form-control"
+              style="text-transform: uppercase"
+              name="last_name"
+              id="last_name"
+              placeholder="Last Name"
+              required
+            />
+            <div class="valid-feedback">Valid</div>
+            <div class="invalid-feedback">Enter Last Name</div>
+          </div>
+          <div class="form-group">
+            <label for="mobile_num">Mobile Number</label>
+            <input
+              maxlength="10"
+              type="tel"
+              class="form-control"
+              name="mobile_num"
+              id="mobile_num"
+              pattern="[0-9]{10}"
+              placeholder="0123456789"
+              required
+            />
+            <div class="valid-feedback">Valid</div>
+            <div class="invalid-feedback">Enter Mobile Number</div>
+          </div>
+          <div class="form-group">
+            <label for="departmentName">Department</label>
+            <select
+              name="departmentName"
+              id="departmentName"
+              class="form-control"
+              required
+            >
+              <option value="firstYear">First Year</option>
+              <option value="computer">Computer</option>
+              <option value="mechanical">Mechanical</option>
+              <option value="civil">Civil</option>
+              <option value="electronics"
+                >Electronics and Telecommunication</option
+              >
+              <option value="it">Information Technology</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="currentYear">Current Year</label>
+            <select
+              name="currentYear"
+              id="currentYear"
+              class="form-control"
+              required
+            >
+              <option value="firstYear">First Year</option>
+              <option value="secondYear">Second Year</option>
+              <option value="thirdYear">Third Year</option>
+              <option value="fourthYear">Fourth Year</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="currentDivision">Division</label>
+            <input
+              pattern="[A-Z]"
+              maxlength="1"
+              type="text"
+              class="form-control"
+              id="currentDivision"
+              name="currentDivision"
+              placeholder="A"
+              required
+            />
+            <div class="valid-feedback">Valid</div>
+            <div class="invalid-feedback">Enter Division</div>
+          </div>
+          <div class="form-group">
+            <label for="createPassword">New Password</label>
+            <input
+              type="text"
+              class="form-control"
+              id="createPassword"
+              name="createPassword"
+              required
+            />
+            <div class="valid-feedback">Valid</div>
+            <div class="invalid-feedback">Enter Valid Password</div>
+          </div>
+          <input
+            type="submit"
+            class="btn btn-primary"
+            id="submitFormBtn"
+            value="Submit"
+          />
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
